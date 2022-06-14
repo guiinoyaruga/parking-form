@@ -1,0 +1,43 @@
+
+form{
+  text-align: center;
+  width: auto;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 5px;
+  padding: 0;
+  word-wrap: break-word;
+}
+
+input{
+  width: 20%;
+  padding: 6px 10px;
+  margin: 8px 4px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: width 0.4s ease-in-out;
+  text-align: start;
+  display: inline-block;
+  transition-delay: 0.2s;
+
+
+}
+
+button{
+  background-color: #cc7108;
+  border-radius: 6px;
+  border: none;
+  color: white;
+  padding: 12px 26px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  transform: 12px;
+}
+
+button:hover{
+  background-color: rgba(49, 172, 44, 0.795);
+  transform: scale(1.1);
+  transition: all 0.5s;
+}
