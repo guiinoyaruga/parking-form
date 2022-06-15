@@ -1,18 +1,20 @@
 <app-registrar-carro (aoRegistrar)="registrar($event)" ></app-registrar-carro>
 
 <h2>Registros</h2>
-<div >
+<div>
   <table>
     <thead>
       <tr>
-      <th>Carro</th>
+      <th>Placa</th>
       <th>Entrada</th>
       <th>Saída</th>
     </tr>
     </thead>
-    <tbody id="tbody">
+    <tbody>
     <tr *ngFor="let register of registers">
-  
+      <td>{{ register.car }}</td>
+      <td>{{ register.input }}</td>
+      <td>{{ register.output }}</td>
     </tr>
     </tbody>
   </table>

@@ -4,25 +4,24 @@ h2{
   padding-top: 30px;
 }
 
-
-
 table {
   border-collapse:collapse;
   border: 1px solid black;
   width: 100%;
-
+  table-layout: fixed;
 }
 
-
-th, td {
+th {
   background-color: #04AA6D;
   border-bottom: 1px solid black;
-  padding: 10px;
+  min-width: 30%;
+  padding-right: 30px;
+  padding-left: 30px;
+  text-align: center;
   color: white;
 }
 
 tbody{
   text-align: center;
   text-transform: uppercase;
-
 }

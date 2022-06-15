@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -26,31 +25,8 @@ export class AppComponent implements OnInit{
   }
 
   showItens(){
-
-    const tbody = document.querySelector('tbody') as unknown as HTMLTableElement;
-    const saveThings = JSON.parse(localStorage.getItem('registers') || '[]')
-
-    tbody.innerText ='';
-
-    for (let i = 0; i < saveThings.length; i++) {
-    let tr = tbody.insertRow() ;
-
-    let td_car = tr.insertCell();
-    let td_input = tr.insertCell();
-    let td_output = tr.insertCell();
-
-    td_car.append(saveThings[i].car);
-    td_input.append(saveThings[i].input);
-    td_output.append(saveThings[i].output);
-
-    td_car.classList.add('center');
-    td_input.classList.add('center');
-    td_output.classList.add('center');
-
-     }
+    this.registers = JSON.parse(localStorage.getItem('registers') || '[]')
    }
-
-
 }
 
 

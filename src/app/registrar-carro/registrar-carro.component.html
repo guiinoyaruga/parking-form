@@ -1,14 +1,13 @@
 <div>
-<h2></h2>
+<h2>Car Parking</h2>
 <form (ngSubmit)="registerInput()">
 
   <label for="carro" >Placa:</label>
   <input type="text" id="carro" placeholder="XXX-0000" [(ngModel)]="car" name="car"/><br>
-  <label type="entrada" for="entrada" >Entrada:</label>
+  <label type="entrada"  for="entrada" >Entrada:</label>
   <input type="time" id="entrada" placeholder="00:00" [(ngModel)]="input" name="input"/><br>
   <label for="saida">Saída:</label>
   <input type="time" id="saida" placeholder="00:00" [(ngModel)]="output" name="output"/><br>
   <button type="submit">Registrar</button>
 </form>
-
 </div>
