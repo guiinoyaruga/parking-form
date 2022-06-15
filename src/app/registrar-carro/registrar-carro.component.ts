@@ -9,28 +9,24 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 export class RegistrarCarroComponent implements OnInit {
 
   constructor() {}
-
   ngOnInit(): void{
-
   }
 
   @Output() aoRegistrar = new EventEmitter<any>();
   @Input() registers: string [] = [];;
 
-  car: string[] =[];
-  input: string[] =[];
-  output: string[] =[];
+  car: string[] = [];
+  output: string [] = [];
 
   registerInput(){
     console.log('Registrado com sucesso');
-    const valorRegistrar = {car: this.car, input: this.input, output: this.output}
+    const valorRegistrar = {car: this.car, date: new Date() , output: this.output}
     this.aoRegistrar.emit(valorRegistrar);
     this.clearFields();
   }
 
   clearFields(){
     this.car = [];
-    this.input = [];
     this.output = [];
   }
 }

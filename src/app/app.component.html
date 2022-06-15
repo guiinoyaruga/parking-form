@@ -12,8 +12,8 @@
     </thead>
     <tbody>
     <tr *ngFor="let register of registers">
-      <td>{{ register.car }}</td>
-      <td>{{ register.input }}</td>
+      <td>{{ register.car  }}</td>
+      <td>{{ register.date | date: "shortTime" }}</td>
       <td>{{ register.output }}</td>
     </tr>
     </tbody>

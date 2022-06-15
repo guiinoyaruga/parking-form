@@ -21,6 +21,7 @@ export class AppComponent implements OnInit{
     this.registersSave= [...this.registros, $event];
     this.registers.push($event);
     localStorage.setItem('registers', JSON.stringify(this.registersSave))
+    alert("Carro Registrado!")
     this.showItens();
   }
 
