@@ -1,4 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { ProductRegisterService } from './product-register.service';
 
 @Component({
   selector: 'app-root',
@@ -6,28 +8,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit{
+
   ngOnInit(): void {
-   this.showItens();
+
+  }
+  constructor (private service: ProductRegisterService){
   }
 
-  title = 'parking-sys';
-
-  registers: any[] = [];
-  registersSave: any[] = [];
-  registros: any[] =[]
-
-  registrar($event: []){
-    this.registros = JSON.parse(localStorage.getItem('registers') || '[]');
-    this.registersSave= [...this.registros, $event];
-    this.registers.push($event);
-    localStorage.setItem('registers', JSON.stringify(this.registersSave))
-    alert("Carro Registrado!")
-    this.showItens();
-  }
-
-  showItens(){
-    this.registers = JSON.parse(localStorage.getItem('registers') || '[]')
-   }
 }
 
 

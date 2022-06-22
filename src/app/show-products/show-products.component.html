@@ -1,0 +1,45 @@
+<div>
+<h2>Produtos</h2>
+
+<form>
+  <label for="product" >
+   <span>Nome:</span>
+  </label>
+  <input type="text" id="name" placeholder="Água" name="name" [(ngModel)]="product.name"/><br>
+
+  <label for="price">
+   <span>Preço:</span>
+  </label>
+  <input type="number" min="1" max="1000" step="0.01" id="price" placeholder="R$ 00,00" name="price" [(ngModel)]="product.price"/><br>
+
+  <button type="submit" (click)="registerProducts()">Registrar produto</button>
+</form>
+
+<button id="show-products" (click)="showProducts()" >Mostrar todos os produtos</button>
+
+<div>
+  <p align="center">Registros</p>
+
+  <table>
+    <thead>
+      <tr>
+      <th>ID</th>
+      <th>Nome</th>
+      <th>Preço</th>
+      <th>Ações</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor= "let product of products">
+      <td>{{product.id}}</td>
+      <td>{{product.name}}</td>
+      <td>{{product.price}}</td>
+      <td> <button (click)="updateProducts(product.id)">Atualizar</button> </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+<div>
+  <footer></footer>
+</div>
