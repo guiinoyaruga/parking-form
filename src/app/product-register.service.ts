@@ -23,5 +23,4 @@ export class ProductRegisterService {
      return this.http.get("http://localhost:3008/produtos");
    }
 
-
   }

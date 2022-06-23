@@ -31,7 +31,7 @@ form{
 }
 
 input{
-  width: 10%;
+  width: 17%;
   padding: clamp(10px, 0.5%, 10%);
   margin: 8px 4px;
   box-sizing: border-box;
@@ -45,7 +45,7 @@ span{
   cursor:text;
 }
 
-button{
+/*button{
   background-color: #cc7108;
   border-radius: 8px;
   border: 1px solid rgb(53, 52, 52);
@@ -54,12 +54,8 @@ button{
   text-decoration: none;
   margin: 4px 2px;
   cursor: pointer;
-}
-#show-products{
-  display: block;
-  margin: 0 auto;
+}*/
 
-}
 button:hover{
   background-color: #04AA6D;
   transform: scale(1.05);

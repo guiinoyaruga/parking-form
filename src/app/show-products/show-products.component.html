@@ -1,28 +1,30 @@
-<div>
+<div class="mb-3">
 <h2>Produtos</h2>
 
-<form>
+<form class="p-3 border bg-light">
   <label for="product" >
    <span>Nome:</span>
   </label>
   <input type="text" id="name" placeholder="Água" name="name" [(ngModel)]="product.name"/><br>
 
-  <label for="price">
+  <label for="price" >
    <span>Preço:</span>
   </label>
   <input type="number" min="1" max="1000" step="0.01" id="price" placeholder="R$ 00,00" name="price" [(ngModel)]="product.price"/><br>
 
-  <button type="submit" (click)="registerProducts()">Registrar produto</button>
+  <button type="submit" class="btn btn-outline-success " (click)="registerProducts()">Registrar produto</button>
+  <br>
+  <div class="dn-col-6 mx-auto">
+    <button class="btn btn-outline-success" (click)="showProducts()" title="Mostrar Produtos Cadastrados" >Mostrar todos os produtos</button>
+  </div>
 </form>
 
-<button id="show-products" (click)="showProducts()" >Mostrar todos os produtos</button>
+<div class="p-3 border bg-light" >
+  <p class="h3 text-center">Produtos Cadastrados</p>
 
-<div>
-  <p align="center">Registros</p>
-
-  <table>
+  <table class="table table-hover">
     <thead>
-      <tr>
+      <tr class="table-active" >
       <th>ID</th>
       <th>Nome</th>
       <th>Preço</th>

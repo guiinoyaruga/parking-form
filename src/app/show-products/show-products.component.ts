@@ -31,6 +31,7 @@ export class ShowProductsComponent implements OnInit {
   }
 
   updateProducts(id: number){
+    console.log(this.product)
     this.productRegisterService.updateProducts(id, this.product).subscribe(product =>{
       this.product = new ProductsModel()
       this.showProducts();
