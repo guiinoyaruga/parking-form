@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ProductRegisterService } from '../product-register.service';
+import { CartService } from '../cart.service';
 import { ProductsModel } from './products.model';
 
 @Component({
@@ -13,7 +14,10 @@ export class ShowProductsComponent implements OnInit {
   product: ProductsModel = new ProductsModel();
   products: Array<any> = new Array<any>();
 
-  constructor(private productRegisterService: ProductRegisterService) {}
+  constructor(
+    private productRegisterService: ProductRegisterService,
+    private cartService: CartService
+  ) {}
 
   ngOnInit(): void {
 
@@ -56,9 +60,8 @@ export class ShowProductsComponent implements OnInit {
     );
   }
 
-  addCart(id: number) {
-    console.log(this.product);
-    this.productRegisterService.addCart(1, product.id).subscribe(
+  async addCart(id: number) {
+    this.productRegisterService.addCart(await this.cartService.getCarrinhoId(), id).subscribe(
      { next: (product) => {
         this.product = new ProductsModel();
         this.showProducts();

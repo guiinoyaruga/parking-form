@@ -10,7 +10,7 @@ import { ProductRegisterService } from './product-register.service';
 export class AppComponent implements OnInit{
 
   ngOnInit(): void {
-
+    
   }
   constructor (private service: ProductRegisterService){
   }
