@@ -1,0 +1,39 @@
+<div class="mb-3">
+  <h2>
+    Carrinho de Produtos
+    <a routerLink="/cart"></a>
+  </h2>
+
+  <div class="p-3 border bg-light">
+    <p class="h3 text-center">Seu carrinho</p>
+
+    <table class="table table-hover">
+      <thead>
+        <tr class="table-active">
+          <th>ID</th>
+          <th>Produto</th>
+          <th>Qt.</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let cart of model">
+          <td>{{ cart.id }}</td>
+          <td>{{ cart.Carts_Items.Product }}</td>
+          <td></td>
+          <td>R$ {{ cart.total }}</td>
+        </tr>
+      </tbody>
+
+      <tfoot></tfoot>
+    </table>
+    <div class="addButton">
+      <button type="button" class="btn btn-outline-success">
+        <a routerLink="/home">Add Novo Produto</a>
+      </button>
+    </div>
+  </div>
+  <div>
+    <footer></footer>
+  </div>
+</div>

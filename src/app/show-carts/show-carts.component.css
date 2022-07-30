@@ -55,11 +55,22 @@ span{
   margin: 4px 2px;
   cursor: pointer;
 }*/
+a{
+  text-decoration: none;
+  color: black;
+
+}
+
+.addButton{
+  text-align: center;
+  padding-top: 15px;
+}
 
 button:hover{
   background-color: #04AA6D;
   transform: scale(1.05);
   transition: all 0.5s;
+
 }
 
 footer{

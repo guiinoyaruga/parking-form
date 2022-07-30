@@ -22,5 +22,7 @@ export class ProductRegisterService {
   showProducts(): Observable<any>{
      return this.http.get("http://localhost:3008/produtos");
    }
-
+  addCart(cartId:any, productId: ProductsModel ): Observable<any>{
+    return this.http.put(`http://localhost:3008/carts/${cartId}/products/`,productId)
+  }
   }
