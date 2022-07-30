@@ -17,11 +17,11 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let cart of model">
-          <td>{{ cart.id }}</td>
-          <td>{{ cart.Carts_Items.Product }}</td>
-          <td></td>
-          <td>R$ {{ cart.total }}</td>
+        <tr *ngFor="let item of carrinho.Carts_Items">
+          <td>{{ item.id }}</td>
+          <td>{{ item.Product.name }}</td>
+          <td>{{ item.qty }}</td>
+          <td>R$ {{ item.total }}</td>
         </tr>
       </tbody>
 

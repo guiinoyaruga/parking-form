@@ -10,21 +10,21 @@ import { CartsModel } from './carts.model';
 export class ShowCartsComponent implements OnInit {
   cartId: number = 1;
 
-  model: Array<any> = new Array<any>();
+  carrinho: any = {};
  
 
 
   constructor(private cartService: CartService) {}
 
-  ngOnInit(): void {
-    this.showCart(this.cartId);
+  async ngOnInit() {
+    this.showCart(await this.cartService.getCarrinhoId());
   }
 
   showCart(cartId) {
     this.cartService.showCart(cartId).subscribe({
       next: (res) => {
-        this.model= res;
-        console.log(this.model)
+        this.carrinho = res;
+        console.log(this.carrinho)
       },
       error: (err) => {
         console.log('Erro ao listar carrinho', err);
