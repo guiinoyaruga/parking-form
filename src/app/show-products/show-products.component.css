@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Kdam+Thmor+Pro&display=swap');
+
+*{
+  font-family: 'Inter', sans-serif;
+}
+
+:root{
+  --white: #FFF;
+  --green: #04AA6D;
+}
+
+
+h2{
+  padding: 5px 12px;
+  border: 3px solid #04AA6D;
+  background:#04AA6D;
+  color: white;
+  text-transform: uppercase;
+  text-decoration-color: white;
+
+}
+form{
+  align-items: center;
+  flex-direction: column;
+  display:flex;
+  width: auto;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 5px;
+  padding: 5px;
+}
+
+input{
+  width: 17%;
+  padding: clamp(10px, 0.5%, 10%);
+  margin: 8px 4px;
+  box-sizing: border-box;
+  border: 1px solid rgb(175, 175, 175);
+  border-radius: 9px;
+  transition: width 0.4s ease-in-out;
+  background-color: var(--green);
+}
+
+span{
+  cursor:text;
+}
+
+/*button{
+  background-color: #cc7108;
+  border-radius: 8px;
+  border: 1px solid rgb(53, 52, 52);
+  color: white;
+  padding: 12px 26px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}*/
+
+button:hover{
+  background-color: #04AA6D;
+  transform: scale(1.05);
+  transition: all 0.5s;
+}
+
+footer{
+  clear: both;
+  margin-top: 360px;
+  position: relative;
+  height: 100px;
+  top: 30px;
+  background:#04AA6D;
+}
+
+table{
+  border-collapse:collapse;
+  border: 1px solid black;
+  text-align: center;
+  width: 40%;
+  margin: 0 auto;
+}
+th {
+  background-color: #04AA6D;
+  border-bottom: 1px solid black;
+  min-width: 30%;
+  padding-right: 30px;
+  padding-left: 30px;
+  text-align: center;
+  color: white;
+}
+
+img{
+  padding-left:900px;
+  height:70px;
+}
